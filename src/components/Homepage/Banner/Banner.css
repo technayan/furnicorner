@@ -1,0 +1,20 @@
+.hero-area {
+    height: 100vh;
+    background-image: url('https://i.ibb.co/TPZsPZQ/hero-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero-text {
+    font-size: 100px;
+}
+
+/* Mobile Device */
+
+@media (max-width: 575.98px) {
+    .hero-text {
+        font-size: 50px;
+    }
+
+}

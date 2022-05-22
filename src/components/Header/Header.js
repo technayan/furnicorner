@@ -5,7 +5,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" className='fixed-top bg-light'>
       <Container>
         <Link to={'/'}>
             <img src="https://i.ibb.co/Rc7DBPQ/furnicorner-logo.png" alt="Furnicorner logo" className='logo' />
@@ -13,7 +13,6 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className='ms-3 ms-md-0'>
           <Nav className="me-auto ms-md-3">
-            <Nav.Link to="/">Home</Nav.Link>
             <Nav.Link href="#products-section">Products</Nav.Link>
             <Nav.Link href="#about-section">About</Nav.Link>
             <Nav.Link href="#services-section">Services</Nav.Link>
