@@ -1,0 +1,15 @@
+.logo{
+    width: 200px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #797979 !important;
+    font-size: 18px;
+
+}
+
+.nav-link:hover {
+    color: #1b4a56 !important;
+}
+
