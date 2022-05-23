@@ -1,10 +1,24 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
+import useProducts from '../../../hooks/useProducts';
+import Product from './Product/Product';
+import './Products.css'
 
 const Products = () => {
+    const [products] = useProducts();
+    console.log(products);
     return (
-        <div>
-            <h2>Products</h2>
-        </div>
+        <section className='products-section py-5'>
+            <h2 className='section-title mx-auto'>Products</h2>
+            <Container>
+        
+                <Row>
+                    {
+                        products.map(product => <Product key={product._id} item={product}/>)
+                    }
+                </Row>
+            </Container>
+        </section>
     );
 };
 

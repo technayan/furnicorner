@@ -1,0 +1,23 @@
+.product-card {
+    border: 1px solid gray !important;
+}
+
+.product-card .product-img {
+    border-radius: 10px;
+}
+
+.product-card .product-name {
+    font-size: 30px;
+}
+
+.product-card .update-btn {
+    background: #91c1c6;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.product-card .update-btn:hover {
+    background: #1b4a56;
+}
