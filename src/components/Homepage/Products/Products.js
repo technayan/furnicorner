@@ -6,12 +6,10 @@ import './Products.css'
 
 const Products = () => {
     const [products] = useProducts();
-    console.log(products);
     return (
-        <section className='products-section py-5'>
+        <section id='products-section'>
             <h2 className='section-title mx-auto'>Products</h2>
             <Container>
-        
                 <Row>
                     {
                         products.map(product => <Product key={product._id} item={product}/>)
