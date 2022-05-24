@@ -1,0 +1,28 @@
+.service-wrapper {
+    box-shadow: 0 0 10px 5px rgb(233, 233, 233);
+    border-radius: 10px
+}
+
+.service-wrapper i {
+    color: #1B4A56;
+    font-size: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.service-wrapper i::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #d0d0d0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.service-wrapper:hover i::after {
+    background: #81C3C9;
+}

@@ -8,7 +8,7 @@ const Product = ({item}) => {
         <div className='col-md-4'>
             <CardGroup>
             <Card className='product-card mt-4'>
-                <Card.Img className='p-3 rounded' variant="top" src={imageUrl} />
+                <Card.Img className='p-3 rounded-3' variant="top" src={imageUrl} />
                 <Card.Body>
                 <Card.Title className='product-name mb-3'>{name}</Card.Title>
                 <Card.Text>{description}</Card.Text>
