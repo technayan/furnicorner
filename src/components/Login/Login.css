@@ -1,0 +1,31 @@
+.form-wrapper {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    border: 1px solid #1b4a56;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.form-title {
+    color: #1b4a56;
+}
+
+.submit-btn {
+    background: #81c3c9;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #1b4a56;
+}
+
+.form-wrapper .btn {
+    color: #1b4a56 !important;
+}
+
+@media (max-width: 576px) {
+    .form-wrapper {
+        width: 325px !important;
+    }
+}

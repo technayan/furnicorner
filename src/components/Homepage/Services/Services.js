@@ -10,7 +10,7 @@ const Services = () => {
                 <Row>
                     <div className="col-md-4 my-3">
                         <div className="service-wrapper p-4 d-flex align-items-start">
-                            <i class="ri-checkbox-circle-line"></i>
+                            <i className="ri-checkbox-circle-line"></i>
                             <div className="service-info ms-4">
                                 <h4>Quality Product</h4>
                                 <p>We provide 100% high qulity furniture to our customers as quality is their first choice.</p>
@@ -19,7 +19,7 @@ const Services = () => {
                     </div>
                     <div className="col-md-4 my-3">
                         <div className="service-wrapper p-4 d-flex align-items-start">
-                            <i class="ri-luggage-cart-line"></i>
+                            <i className="ri-luggage-cart-line"></i>
                             <div className="service-info ms-4">
                                 <h4>Wholesale</h4>
                                 <p>If you are a retailer, then come to us and buy products at a best price and offer.</p>
@@ -28,37 +28,37 @@ const Services = () => {
                     </div>
                     <div className="col-md-4 my-3">
                         <div className="service-wrapper p-4 d-flex align-items-start">
-                            <i class="ri-truck-line"></i>
+                            <i className="ri-truck-line"></i>
                             <div className="service-info ms-4">
                                 <h4>Fast Delivery</h4>
-                                <p>We are very much serious about delivery. We'll deliver your products within 24 hours only.</p>
+                                <p>We are very much serious about delivery. We'll deliver your products within 24 hours.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4 my-3">
                         <div className="service-wrapper p-4 d-flex align-items-start">
-                            <i class="ri-ship-2-line"></i>
+                            <i className="ri-ship-2-line"></i>
                             <div className="service-info ms-4">
                                 <h4>Imported Product</h4>
-                                <p>We provide imported high quality products to our customers with a best deal of warranty.</p>
+                                <p>We provide imported high quality products to our customers with best warranty.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4 my-3">
                         <div className="service-wrapper p-4 d-flex align-items-start">
-                            <i class="ri-store-2-line"></i>
+                            <i className="ri-store-2-line"></i>
                             <div className="service-info ms-4">
                                 <h4>Warehousing</h4>
-                                <p>We are a warehousing company. We store huge amount of products from different dealers.</p>
+                                <p>We are a warehousing company. We store products from dealers.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4 my-3">
                         <div className="service-wrapper p-4 d-flex align-items-start">
-                            <i class="ri-customer-service-2-line"></i>
+                            <i className="ri-customer-service-2-line"></i>
                             <div className="service-info ms-4">
                                 <h4>24hr Support</h4>
-                                <p>We have the best customer service. Our customer service team is always ready to help you.</p>
+                                <p>We have the best customer service. Our customer service team is always ready to help.</p>
                             </div>
                         </div>
                     </div>
