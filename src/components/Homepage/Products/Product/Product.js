@@ -4,6 +4,11 @@ import './Product.css'
 
 const Product = ({item}) => {
     const {_id, name, imageUrl, description, price, quantity, supplier} = item;
+
+    const updateProduct = (id) => {
+        console.log(id);
+    }
+
     return (
         <div className='col-md-4'>
             <CardGroup>
@@ -15,7 +20,7 @@ const Product = ({item}) => {
                 <p className='mb-2'><strong>Price : ${price}</strong></p>
                 <p className='mb-2'>Quantity : {quantity}</p>
                 <p className='mb-2'>Supplier : {supplier}</p>
-                <button className='update-btn mt-3 w-100 p-2'>Update</button>
+                <button className='update-btn mt-3 w-100 p-2' onClick={() => updateProduct(_id)}>Update</button>
                 </Card.Body>
             </Card>
             </CardGroup>
