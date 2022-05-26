@@ -1,0 +1,36 @@
+.divider {
+    position: relative;
+    text-align: center;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    height: 1px;
+    width: 20%;
+    background: #1b4a56;
+}
+
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    height: 1px;
+    width: 20%;
+    background: #1b4a56;
+}
+
+.google-sign-in {
+    border: 1px solid gray;
+    background: transparent;
+    color: #1b4a56;
+    transition: 0.3s ease;
+}
+
+.google-sign-in:hover {
+    color: #fff;
+    background: #1b4a56;
+}

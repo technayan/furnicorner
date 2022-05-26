@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer/Footer';
@@ -17,6 +18,8 @@ function App() {
         <Route path='/register' element={<Register />} />
       </Routes>
       <Footer />
+
+      <ToastContainer />
     </div>
   );
 }
