@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Homepage from './components/Homepage/Homepage';
 import Login from './components/Login/Login';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
+import MyItems from './components/MyItems/MyItems';
 import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
@@ -27,6 +28,10 @@ function App() {
         <Route path='/add-item' element={
           <RequireAuth>
             <AddItems />
+          </RequireAuth>} />
+        <Route path='/my-items' element={
+          <RequireAuth>
+            <MyItems />
           </RequireAuth>} />
         <Route path='*' element={<NotFound />} />
       </Routes>

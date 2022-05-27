@@ -8,7 +8,6 @@ const Products = () => {
     const [products] = useProducts();
 
     const homeProducts = products.slice(0,6);
-    console.log(homeProducts);
     return (
         <section id='products-section'>
             <h2 className='section-title mx-auto'>Products</h2>

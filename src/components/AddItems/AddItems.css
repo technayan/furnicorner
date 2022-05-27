@@ -17,3 +17,9 @@
     background: #1b4a56;
     color: #fff;
 }
+
+@media (max-width: 575.98px) {
+    .add-items-form {
+        width: 100%;
+    }
+}
