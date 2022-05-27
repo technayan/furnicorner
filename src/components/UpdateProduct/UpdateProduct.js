@@ -14,7 +14,7 @@ const UpdateProduct = () => {
     const [product, setProduct]= useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/service/${id}`;
+        const url = `http://localhost:5000/product/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -33,7 +33,7 @@ const UpdateProduct = () => {
             supplier : product.supplier
         }
 
-        const url = `http://localhost:5000/service/${id}`;
+        const url = `http://localhost:5000/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -68,9 +68,9 @@ const UpdateProduct = () => {
             
             <Container className='d-flex flex-column justify-content-center my-5 pt-5'>
                 <h2 className='mb-5'>Update Product</h2>
-                <div className='product-details-wrapper d-flex flex-column flex-md-row align-items-center justify-content-between'>
-                    <img src={product.imageUrl} className='w-25 rounded' alt={product.name} />
-                    <div className="product-details-info w-50 my-4 my-md-0">
+                <div className='product-details-wrapper d-flex flex-column flex-md-row align-items-md-center align-items-start'>
+                    <img src={product.imageUrl} className='rounded product-detail-img mx-auto ms-md-0' alt={product.name} />
+                    <div className="product-details-info my-4 my-md-0">
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <p><strong>Price : {product.price}</strong></p>
@@ -84,7 +84,7 @@ const UpdateProduct = () => {
             </Container>
             <Container>
                 <h2 className='text-center'>Restock Product</h2>
-                <form className='restock-form p-3 mt-3 w-50 mx-auto' onSubmit={handleRestock}>
+                <form className='restock-form p-3 mt-3 mx-auto' onSubmit={handleRestock}>
                     <input className='p-2' type="number" name='restock' placeholder='Restock Quantity' required />
                     <input className='py-2' type="submit" value='Restock' />
                 </form>

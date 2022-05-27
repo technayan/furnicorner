@@ -1,4 +1,10 @@
+.product-detail-img {
+    width: 25%;
+}
 
+.product-details-info {
+    width: 50%;
+}
 
 .delivered-btn {
     background: #81c3c9;
@@ -30,4 +36,19 @@
     background: #1B4A56;
     color: #fff;
     border: 2px solid #1B4A56;
+}
+
+@media (min-width: 576px) {
+    .restock-form {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .product-detail-img {
+        width: 80%;
+    }
+    .product-details-info {
+        width: 100%;
+    }
 }

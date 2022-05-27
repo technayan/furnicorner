@@ -1,0 +1,19 @@
+.add-items-form {
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.add-item-btn {
+    background: #81C3C9;
+    color: #1B4A56;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.add-item-btn:hover {
+    background: #1b4a56;
+    color: #fff;
+}

@@ -24,7 +24,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav" className='ms-3 ms-md-0'>
           <Nav className='ms-auto'>
               {
-                user ? <><Link className='nav-link' to="/add-items">Add Items</Link>
+                user ? <><Link className='nav-link' to="/add-item">Add Item</Link>
                 <Link className='nav-link' to="/my-items">My Items</Link><button onClick={handleLogOut} className='btn nav-link'>Log out</button></> : <> <Link className='nav-link' to="/login">Login</Link>
                 <Link className='nav-link' to="/Register">Register</Link> </>
               }
