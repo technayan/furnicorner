@@ -1,6 +1,4 @@
-.product-details-wrapper {
-    margin: 100px 0;
-}
+
 
 .delivered-btn {
     background: #81c3c9;
@@ -13,4 +11,23 @@
 .delivered-btn:hover {
     background: #1B4A56;
     color:#fff;
+}
+
+.restock-form input[type=number] {
+    width: 70%;
+}
+
+.restock-form input[type=submit] {
+    width: 30%;
+    color:#1B4A56;
+    background: #81c3c9;
+    transition: 0.3s ease;
+    border: 2px solid #81c3c9;
+    font-weight: bold;
+}
+
+.restock-form input[type=submit]:hover {
+    background: #1B4A56;
+    color: #fff;
+    border: 2px solid #1B4A56;
 }

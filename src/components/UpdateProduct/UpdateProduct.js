@@ -20,10 +20,10 @@ const UpdateProduct = () => {
         .then(data => setProduct(data))
     }, [product]);
 
-    const handleDelivery = () => {
-        const currentQuantity = product.quantity;
-        const updatedQuantity = JSON.stringify(currentQuantity - 1);
+    // Update Product Handler
+    const handleUpdateProduct = updatedQuantity => {
 
+        // Updated Product
         const updatedProduct = {
             name : product.name,
             imageUrl : product.imageUrl,
@@ -33,7 +33,6 @@ const UpdateProduct = () => {
             supplier : product.supplier
         }
 
-        
         const url = `http://localhost:5000/service/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -44,19 +43,35 @@ const UpdateProduct = () => {
         })
         .then(res => res.json())
         .then(data => console.log(data))
+    }
+
+    const handleDelivery = () => {
+        const currentQuantity = product.quantity;
+        const updatedQuantity = JSON.stringify(currentQuantity - 1);
+
+        handleUpdateProduct(updatedQuantity);
         
     }
 
-    
+    const handleRestock = e => {
+        e.preventDefault();
+        const restockQuantity = parseInt(e.target.restock.value);
+        const currentQuantity = parseInt(product.quantity);
+        const updatedQuantity = currentQuantity + restockQuantity;
+
+        handleUpdateProduct(updatedQuantity);
+        e.target.restock.value = '';
+    }
 
     return (
         <div>
-            <h2>Update Product</h2>
-            <Container>
-                <div className='product-details-wrapper d-flex align-items-center justify-content-between'>
+            
+            <Container className='d-flex flex-column justify-content-center my-5 pt-5'>
+                <h2 className='mb-5'>Update Product</h2>
+                <div className='product-details-wrapper d-flex flex-column flex-md-row align-items-center justify-content-between'>
                     <img src={product.imageUrl} className='w-25 rounded' alt={product.name} />
-                    <div className="product-details-info w-50">
-                        <h2>{product.name}</h2>
+                    <div className="product-details-info w-50 my-4 my-md-0">
+                        <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <p><strong>Price : {product.price}</strong></p>
                         <p>Supplier : {product.supplier}</p>
@@ -66,6 +81,13 @@ const UpdateProduct = () => {
                         <button onClick={handleDelivery} className="delivered-btn px-4 py-2 rounded mt-3">Delivered</button>
                     </div>
                 </div>
+            </Container>
+            <Container>
+                <h2 className='text-center'>Restock Product</h2>
+                <form className='restock-form p-3 mt-3 w-50 mx-auto' onSubmit={handleRestock}>
+                    <input className='p-2' type="number" name='restock' placeholder='Restock Quantity' required />
+                    <input className='py-2' type="submit" value='Restock' />
+                </form>
             </Container>
         </div>
     );

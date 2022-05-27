@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Homepage from './components/Homepage/Homepage';
 import Login from './components/Login/Login';
+import RequireAuth from './components/Login/RequireAuth/RequireAuth';
+import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
 
@@ -17,7 +19,11 @@ function App() {
         <Route path='/' element={<Homepage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/inventory/:id' element={<UpdateProduct />} />
+        <Route path='/inventory/:id' element={
+          <RequireAuth>
+            <UpdateProduct />
+          </RequireAuth>} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
 
