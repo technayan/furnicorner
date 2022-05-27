@@ -56,7 +56,7 @@ const Login = () => {
                     </form>
                     <p >Don't have an account? <Link to={'/register'} element={<Register />}>Register</Link></p>
                     <p className="divider">OR</p>
-            <button onClick={handleSignInWithGoogle} className="google-sign-in d-flex rounded p-2 justify-content-center w-100"><i className="ri-google-fill me-1"></i> Sign Up with Google</button>
+            <button onClick={handleSignInWithGoogle} className="google-sign-in d-flex rounded p-2 justify-content-center w-100"><i className="ri-google-fill me-1"></i> Sign In with Google</button>
                 </div>
             </Container>
         </div>

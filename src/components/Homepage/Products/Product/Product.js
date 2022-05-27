@@ -1,13 +1,17 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
 import './Product.css'
+import { useNavigate } from 'react-router-dom';
 
 const Product = ({item}) => {
     const {_id, name, imageUrl, description, price, quantity, supplier} = item;
 
+    const navigate = useNavigate();
+
     const updateProduct = (id) => {
-        console.log(id);
+        navigate(`/inventory/${id}`);
     }
+
 
     return (
         <div className='col-md-4'>

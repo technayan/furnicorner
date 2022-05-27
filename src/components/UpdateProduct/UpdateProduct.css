@@ -1,0 +1,16 @@
+.product-details-wrapper {
+    margin: 100px 0;
+}
+
+.delivered-btn {
+    background: #81c3c9;
+    color:#1B4A56;
+    transition: 0.3s ease;
+    font-weight: bold;
+    border: none;
+}
+
+.delivered-btn:hover {
+    background: #1B4A56;
+    color:#fff;
+}
