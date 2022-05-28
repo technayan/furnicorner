@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './UpdateProduct.css';
 
 const UpdateProduct = () => {
@@ -70,7 +70,7 @@ const UpdateProduct = () => {
                 <h2 className='mb-5'>Update Product</h2>
                 <div className='product-details-wrapper d-flex flex-column flex-md-row align-items-md-center align-items-start'>
                     <img src={product.imageUrl} className='rounded product-detail-img mx-auto ms-md-0' alt={product.name} />
-                    <div className="product-details-info my-4 my-md-0">
+                    <div className="product-details-info my-4 my-md-0 mx-md-5">
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <p><strong>Price : {product.price}</strong></p>
@@ -88,6 +88,9 @@ const UpdateProduct = () => {
                     <input className='p-2' type="number" name='restock' placeholder='Restock Quantity' required />
                     <input className='py-2' type="submit" value='Restock' />
                 </form>
+                <div className="text-center">
+                    <Link className='custom-link' to={'/manage-inventories'}>Manage Inventories</Link>
+                </div>
             </Container>
         </div>
     );
