@@ -2,6 +2,7 @@ import { ToastContainer } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddItems from './components/AddItems/AddItems';
+import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Homepage from './components/Homepage/Homepage';
@@ -38,6 +39,7 @@ function App() {
           <RequireAuth>
             <ManageInventories />
           </RequireAuth>} />
+        <Route path='/blogs' element={<Blogs />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
