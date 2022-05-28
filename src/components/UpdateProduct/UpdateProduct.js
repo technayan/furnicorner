@@ -14,7 +14,7 @@ const UpdateProduct = () => {
     const [product, setProduct]= useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://aqueous-bastion-42531.herokuapp.com/product/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -33,7 +33,7 @@ const UpdateProduct = () => {
             supplier : product.supplier
         }
 
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://aqueous-bastion-42531.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -14,7 +14,7 @@ const MyItems = () => {
     const email = user.email;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${email}`)
+        fetch(`https://aqueous-bastion-42531.herokuapp.com/products/${email}`)
         .then(res => res.json())
         .then(data => setMyItems(data))
     })
@@ -23,7 +23,7 @@ const MyItems = () => {
         const confirm = window.confirm('Are you sure to delete this product?');
         
         if (confirm) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://aqueous-bastion-42531.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

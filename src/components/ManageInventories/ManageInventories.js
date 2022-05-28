@@ -11,7 +11,7 @@ const ManageInventories = () => {
         if(confirm) {
             const rest = products.filter(product => product._id !== id);
         
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://aqueous-bastion-42531.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

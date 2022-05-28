@@ -24,7 +24,7 @@ const AddItems = () => {
 
         
 
-        fetch(`http://localhost:5000/products`, {
+        fetch(`https://aqueous-bastion-42531.herokuapp.com/products`, {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
