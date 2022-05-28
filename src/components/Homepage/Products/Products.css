@@ -21,3 +21,23 @@ section {
     height: 5px;
     background: #81c3c9;
 }
+
+.custom-link {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #81c3c9;
+    color: #1b4a56;
+    transition: 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    margin: 40px auto 0;
+    text-align: center;
+
+}
+
+.custom-link:hover {
+    background: #1b4a56;
+    color: #fff;
+}

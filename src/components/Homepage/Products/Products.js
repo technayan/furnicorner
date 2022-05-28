@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
 import Product from './Product/Product';
 import './Products.css'
@@ -16,6 +17,9 @@ const Products = () => {
                     {
                         homeProducts.map(product => <Product key={product._id} item={product}/>)
                     }
+                    <div className='text-center'>
+                        <Link className='custom-link' to={'/manage-inventories'}>Manage Inventories</Link>
+                    </div>
                 </Row>
             </Container>
         </section>

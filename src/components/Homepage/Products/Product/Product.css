@@ -12,12 +12,14 @@
 
 .product-card .update-btn {
     background: #91c1c6;
-    color: #fff;
+    color: #1b4a56;
     border: none;
     border-radius: 10px;
+    font-weight: bold;
     transition: 0.3s ease;
 }
 
 .product-card .update-btn:hover {
     background: #1b4a56;
+    color: #fff;
 }

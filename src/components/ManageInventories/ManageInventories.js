@@ -1,46 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../firebase.init';
-import './MyItems.css'
+import useProducts from '../../hooks/useProducts';
 
-const MyItems = () => {
-    
-    const [myItems, setMyItems] = useState([]);
-
-    const [user] = useAuthState(auth);
-
-    const email = user.email;
-
-    useEffect(() => {
-        fetch(`http://localhost:5000/products/${email}`)
-        .then(res => res.json())
-        .then(data => setMyItems(data))
-    })
+const ManageInventories = () => {
+    const [products, setProducts] = useProducts();
 
     const handleDeleteProduct = id => {
         const confirm = window.confirm('Are you sure to delete this product?');
+        if(confirm) {
+            const rest = products.filter(product => product._id !== id);
         
-        if (confirm) {
             const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
             .then(res => res.json())
             .then(data => console.log(data))
+            setProducts(rest);
         }
         else {
             return;
         }
-        
     }
+
     return (
         <div>
             <Container className='mt-5 pt-5'>
-                <h2>My Items</h2>
+                <h2>Manage Inventories</h2>
                 {
-                    myItems.map(product => 
+                    products.map(product => 
                         <div key={product._id} className='my-items-wrapper d-flex flex-column flex-md-row'>
                             <img className='my-items-img' src={product.imageUrl} alt={product.name} />
                             <div className="my-items-info mx-0 mx-md-4">
@@ -53,16 +42,17 @@ const MyItems = () => {
                             <div className='d-flex align-items-center'>
                             <button onClick={() => handleDeleteProduct(product._id)} className='btn btn-danger delete-btn'>Delete</button>
                             </div>
+                            
                         </div>
                     )
                 }
                 <div className="text-center">
                     <Link className='custom-link' to={'/add-item'}>Add Item</Link>
                 </div>
+                
             </Container>
-            
         </div>
     );
 };
 
-export default MyItems;
+export default ManageInventories;
